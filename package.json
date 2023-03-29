@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/antiLimited/antilimited.github.io/issues"
   },
-  "homepage": "https://github.com/antiLimited/antilimited.github.io#readme"
+  "homepage": "https://github.com/antiLimited/antilimited.github.io#readme",
+  "dependencies": {
+    "xterm": "^5.1.0"
+  }
 }
