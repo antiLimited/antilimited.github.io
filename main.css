@@ -5,3 +5,8 @@ body {
     font-family: 'JetBrains Mono', monospace;
     color:rgb(163, 221, 255);
 }
+#terminal {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    padding: 100px;
+}
