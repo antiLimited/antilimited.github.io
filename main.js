@@ -6,7 +6,7 @@ document.addEventListener('keydown', function (event) {
         termText = termText + event.key
         term.innerHTML = termText
     } else if (event.key == "Enter"){
-        termText = termText + "<br>"
+        termText = termText + "<br>[user@antilimit.dev ~]$ "
         term.innerHTML = termText
     } else if (event.key == "Backspace"){
         termText = termText.slice(0, -1)
