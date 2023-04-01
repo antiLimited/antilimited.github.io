@@ -21,8 +21,8 @@ function renderInput(i) {
 
 function sendCommand(i) {
     input = ""
-    prevCont = prevCont + "<br>[user@antilimit.dev ~]$ " + i
-    term.innerHTML = term.innerHTML + prevCont
+    prevCont = prevCont + i + "<br>[user@antilimit.dev ~]$ "
+    term.innerHTML = prevCont
 }
 
 let prevCont = "[user@antilimit.dev ~]$ "
