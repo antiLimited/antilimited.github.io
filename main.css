@@ -5,12 +5,4 @@ body {
     text-align: left;
     font-family: 'JetBrains Mono', monospace;
     color:rgb(163, 221, 255);
-    height: auto;
-    padding: 2%;
-    
-}
-#terminal {
-    background-color: rgb(20, 20, 20);
-    padding: 0%;
-    height: auto;
 }
