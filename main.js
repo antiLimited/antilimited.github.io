@@ -1,19 +1,17 @@
 let term = document.getElementById("terminal-text")
 
-// document.addEventListener('keydown', function (event) {
-//     let termText = term.innerHTML
-//     if (event.key.length == 1) {
-//         termText = termText + event.key
-//         term.innerHTML = termText
-//     } else if (event.key == "Enter"){
-//         termText = termText + "<br>[user@antilimit.dev ~]$ "
-//         term.innerHTML = termText
-//     } else if (event.key == "Backspace"){
-//         termText = termText.slice(0, -1)
-//         term.innerHTML = termText
-//     }
-//     document.getElementById("page-bottom").scrollIntoView()
-// })
+let commands = [
+    {
+        "cmd": "help",
+        "params": null,
+        "response": "Hello!"
+    },
+    {
+        "cmd": "help2",
+        "params": null,
+        "response": "Hello!2"
+    }
+]
 
 function renderInput(i) {
     term.innerHTML = prevCont + i
@@ -21,23 +19,36 @@ function renderInput(i) {
 
 function sendCommand(i) {
     input = ""
-    prevCont = prevCont + i + "<br>[user@antilimit.dev ~]$ "
+    prevCont = prevCont + i
+    let commandRan = false
+    for (let iter in commands) {
+        iter = commands[iter]
+        if (iter.cmd == i) {
+            prevCont = prevCont + "<br>" + iter.response
+            commandRan = true
+        }
+    }
+    if (commandRan == false) {
+        prevCont = prevCont + "<br>Command not Found! Refer to \"help\" for a list of proper commands."
+    }
+    prevCont = prevCont + "<br>[user@antilimit.dev ~]$ "
     term.innerHTML = prevCont
 }
 
-let prevCont = "[user@antilimit.dev ~]$ "
+let prevCont = "Run the command \"help\" for more information on this page.<br>[user@antilimit.dev ~]$ "
 let input = ""
 
 document.addEventListener('keydown', function (event) {
     if (event.key.length == 1) {
         input = input + event.key
+        renderInput(input)
     } else if (event.key == "Enter") {
+        //renderInput(input)
         sendCommand(input)
     } else if (event.key == "Backspace") {
         input = input.slice(0, -1)
+        renderInput(input)
     }
     console.log(input)
-    renderInput(input)
     document.getElementById("page-bottom").scrollIntoView()
 })
-debugger
