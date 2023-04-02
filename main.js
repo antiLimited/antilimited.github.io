@@ -1,5 +1,7 @@
 let term = document.getElementById("terminal-text")
 
+
+// test lmao
 let commands = [
     {
         "cmd": "help",
