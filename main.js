@@ -4,12 +4,17 @@ let commands = [
     {
         "cmd": "help",
         "params": null,
-        "response": "Hello!"
+        "response": "help: You obviously know how to use this.<br>pfp: Provides the link to an ascii art of my profile picture.<br>github: Provides the link to my github profile."
     },
     {
-        "cmd": "help2",
+        "cmd": "pfp",
         "params": null,
-        "response": "Hello!2"
+        "response": "<a href=\"pfp.txt\">pfp.txt</a>"
+    },
+    {
+        "cmd": "github",
+        "params": null,
+        "response": "<a href=\"https://github.com/antiLimited\">https://github.com/antiLimited</a>"
     }
 ]
 
@@ -43,7 +48,6 @@ document.addEventListener('keydown', function (event) {
         input = input + event.key
         renderInput(input)
     } else if (event.key == "Enter") {
-        //renderInput(input)
         sendCommand(input)
     } else if (event.key == "Backspace") {
         input = input.slice(0, -1)
