@@ -1,20 +1,7 @@
 :root {
-    --global-font-size: 15px;
-    --global-line-height: 1.4em;
-    --global-space: 10px;
-    --font-stack: 'Jetbrains Mono', monospace;
-    --mono-font-stack: 'Jetbrains Mono', monospace;
-    --background-color: #222225;
-    --page-width: 60em;
-    --font-color: #e8e9ed;
-    --invert-font-color: #222225;
-    --secondary-color: #a3abba;
-    --tertiary-color: #a3abba;
-    --primary-color: #62c4ff;
-    --error-color: #ff3c74;
-    --progress-bar-background: #3f3f44;
-    --progress-bar-fill: #62c4ff;
-    --code-bg-color: #3f3f44;
-    --input-style: solid;
-    --display-h1-decoration: none;
+    --primary-color: #7FFFD4;
+    --secondary-color: #B2FFFF;
+    --tertiary-color: #D0F0C0;
+    --foreground-color: #36454F;
+    --background-color: #1B1B1B;
 }
