@@ -19,19 +19,21 @@ body {
 
 /* Navigation Bar */
 .navbar {
+    display: inline-block;
     position: sticky;
     top: 25px; /* Space at the top */
     margin-left: 25px;
     margin-right: 25px;
     padding: 0;
+    width: auto;
     border-radius: 15px;
     overflow: hidden;
+    text-align: center;
     background-color: var(--foreground-color);
 }
 
 .navbar a {
-    display: block;
-    float: left;
+    display: inherit;
     color: var(--secondary-color);
     text-align: center;
     padding: 14px 16px;
