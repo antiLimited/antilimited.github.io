@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="src/style.css">
 
+
+
 <div class="navbar">
-    <a href="./" id="navbar-first">Home</a>
+    <a href="./" id="navbar-first">HOME</a>
     <div class="navbar-sep"></div>
-    <a href="./" id="navbar-last">Profiles</a>
+    <a href="./" id="navbar-last">PROFILES</a>
     <div class="navbar-sep"></div>
-    <a href="./" id="navbar-last">Projects</a>
+    <a href="./" id="navbar-last">PROJECTS</a>
 </div>
 
 <div class="main-content">

@@ -16,33 +16,44 @@
 
 /* Page Body Formatting */
 body {
-    margin: 0; 
-    background-color: var(--background-color);
+    margin: 0;
 
+    background-color: var(--background-color);
 }
 
 /* Navigation Bar */
 .navbar {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    margin: auto;
+
     position: sticky;
-    top: 25px; /* Space at the top */
+    width: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin: auto;
+    top: 25px;
     padding: 0;
     border-radius: 15px;
-    overflow: hidden;
+
     background-color: var(--foreground-color);
 }
 
 .navbar a {
     display: inherit;
+
+    margin: 5px 11px;
+    padding: 9px 9px;
+    border-radius: 10px;
+
     color: var(--primary-color);
+    font-size: 20pt;
+    font-weight: 900;
+    transform: scale(1, 0.8);
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: solid;
 }
 
 .navbar a:hover {
@@ -51,7 +62,7 @@ body {
 
 .navbar-sep {
     display: inherit;
-    vertical-align: middle;
+
     height: 30px;
     border: 1px solid var(--secondary-color);
 }
