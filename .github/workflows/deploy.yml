@@ -24,7 +24,7 @@ jobs:
         run: npm run build
       
       - name: Add CNAME file
-        run: touch ./dist/CNAME && echo "antilimit.dev" > ./dist/CNAME
+        run: touch ./dist/CNAME && echo "www.antilimit.dev" > ./dist/CNAME
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
