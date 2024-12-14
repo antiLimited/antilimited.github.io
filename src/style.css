@@ -9,45 +9,62 @@
     --primary-color: #7FFFD4;
     --secondary-color: #B2FFFF;
     --tertiary-color: #D0F0C0;
+    --hover-color: #545454;
     --foreground-color: #343434;
     --background-color: #1B1B1B;
 }
 
-/* Page Body Formatting + Defaults */
+/* Page Body Formatting */
 body {
     margin: 0; 
     background-color: var(--background-color);
 
 }
 
-body h1,h2,h3,h4,h5,h6 {
-    color: var(--primary-color);
-}
-
 /* Navigation Bar */
 .navbar {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
     position: sticky;
     top: 25px; /* Space at the top */
-    margin-left: 25px;
-    margin-right: 25px;
     padding: 0;
-    width: auto;
     border-radius: 15px;
     overflow: hidden;
-    text-align: center;
     background-color: var(--foreground-color);
 }
 
 .navbar a {
     display: inherit;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
+.navbar a:hover {
+    background-color: var(--hover-color);
+}
+
+.navbar-sep {
+    display: inherit;
+    vertical-align: middle;
+    height: 30px;
+    border: 1px solid var(--secondary-color);
+}
+
 /* Main Content */
 .main-content {
     padding: 40px;
+}
+
+.main-content h1,h2,h3,h4,h5,h6 {
+    color: var(--primary-color);
+}
+
+.main-content p {
+    color: var(--secondary-color)
 }
