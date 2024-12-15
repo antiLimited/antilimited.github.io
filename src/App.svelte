@@ -1,11 +1,12 @@
 <script>
+    import { curPage } from "./stores.js";
     import Navbar from "./lib/navbar.svelte";
 </script>
 
 <Navbar></Navbar>
 
 <div class="main-content">
-    <h1>hello</h1>
+    <h1>{$curPage}</h1>
     <p>line</p>
     <p>line</p>
     <p>line</p>

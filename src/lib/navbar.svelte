@@ -1,4 +1,6 @@
 <script>
+    import { curPage } from "../stores.js";
+
     document.addEventListener('DOMContentLoaded', function() {
         console.log("DOM loaded!")
         if (window.scrollY == 0) {
@@ -20,9 +22,9 @@
 </script>
 
 <div class="navbar">
-    <a href="./" id="navbar-first">HOME</a>
+    <a href="#" id="navbar-first" on:click={() => $curPage = "home"}>HOME</a>
     <div class="navbar-sep"></div>
-    <a href="./" id="navbar-last">PROFILES</a>
+    <a href="#" id="navbar-last" on:click={() => $curPage = "profiles"}>PROFILES</a>
     <div class="navbar-sep"></div>
-    <a href="./" id="navbar-last">PROJECTS</a>
+    <a href="#" id="navbar-last" on:click={() => $curPage = "projects"}>PROJECTS</a>
 </div>
