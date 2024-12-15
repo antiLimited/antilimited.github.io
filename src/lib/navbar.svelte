@@ -1,11 +1,20 @@
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded!")
+        if (window.scrollY == 0) {
+            document.querySelector(".navbar").classList.add("navbar-init-up")
+        } else {
+            document.querySelector(".navbar").classList.add("navbar-init-down")
+        }
+    }, false);
+
     addEventListener("scroll", () => {
         if (window.scrollY == 0) {
-            document.querySelector(".navbar").classList.add("up");
-            document.querySelector(".navbar").classList.remove("down");
+            document.querySelector(".navbar").classList.add("navbar-up");
+            document.querySelector(".navbar").classList.remove("navbar-down");
         } else {
-            document.querySelector(".navbar").classList.add("down");
-            document.querySelector(".navbar").classList.remove("up");
+            document.querySelector(".navbar").classList.add("navbar-down");
+            document.querySelector(".navbar").classList.remove("navbar-up");
         }
     });
 </script>

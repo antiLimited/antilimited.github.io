@@ -7,6 +7,7 @@
     --tertiary-color: #D0F0C0;
     --hover-color: #545454;
     --foreground-color: #343434;
+    --navbar-foreground-color: #343434cc;
     --background-color: #1B1B1B;
 
     font-family: "Inter", sans-serif;
@@ -24,13 +25,13 @@ body {
 /* Navigation Bar */
 @keyframes up-navbar {
     0% {top: 25px; border-radius: 15px;}
-    80% {border-radius: 0px 0px 15px 15px;}
-    100% {top: 0; border-radius: 0px 0px 15px 15px;}
+    50% {top: 0px; padding-top: 25px; border-radius: 0px 0px 15px 15px;}
+    100% {padding-top: 0px; border-radius: 0px 0px 15px 15px;}
 }
 
-.navbar.up {
+.navbar-up {
     animation-name: up-navbar;
-    animation-duration: 250ms;
+    animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
@@ -40,7 +41,7 @@ body {
     100% {top: 25px; border-radius: 15px;}
 }
 
-.navbar.down {
+.navbar-down {
     animation-name: down-navbar;
     animation-duration: 250ms;
     animation-fill-mode: forwards;
@@ -53,14 +54,26 @@ body {
     justify-content: center;
     align-items: center;
 
-    position: sticky;
+    position: fixed;
     width: fit-content;
     margin: auto;
-    margin-top: 0px;
-    top: 0px;
-    border-radius: 15px;
+    left: 25px;
+    right: 25px;
+    border-radius: 0px 0px 15px 15px;
 
-    background-color: var(--foreground-color);
+    background-color: var(--navbar-foreground-color);
+}
+
+.navbar-init-up {
+    top: 0px;
+    padding-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.navbar-init-down {
+    top: 25px;
+    padding-top: 0px;
+    border-radius: 15px;
 }
 
 .navbar a {
@@ -76,6 +89,8 @@ body {
     transform: scale(1, 0.8);
     text-align: center;
     text-decoration: solid;
+
+    background-color: var(--foreground-color);
 }
 
 .navbar a:hover {
