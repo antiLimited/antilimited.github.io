@@ -92,13 +92,14 @@ body {
 }
 
 @keyframes navbar-active-switch {
-    0% {color: var(--primary-color); background-color: var(--foreground-color);}
-    100% {color: var(--foreground-color); background-color: var(--primary-color);}
+    0% {color: var(--primary-color); background-color: var(--foreground-color); margin: 5px 11px; padding: 9px 9px;}
+    50% {margin: 3px 8px; padding: 12px 12px;}
+    100% {color: var(--foreground-color); background-color: var(--primary-color); margin: 5px 11px; padding: 9px 9px;}
 }
 
 .navbar-active {
     animation-name: navbar-active-switch;
-    animation-duration: 250ms;
+    animation-duration: 350ms;
     animation-fill-mode: forwards;
 
     color: var(--foreground-color);
