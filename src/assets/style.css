@@ -91,13 +91,31 @@ body {
     text-decoration: solid;
 }
 
+@keyframes navbar-active-switch {
+    0% {color: var(--primary-color); background-color: var(--foreground-color);}
+    100% {color: var(--foreground-color); background-color: var(--primary-color);}
+}
+
 .navbar-active {
+    animation-name: navbar-active-switch;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+
     color: var(--foreground-color);
 
     background-color: var(--primary-color);
 }
 
+@keyframes navbar-inactive-switch {
+    0% {color: var(--foreground-color); background-color: var(--primary-color);}
+    100% {color: var(--primary-color); background-color: var(--foreground-color);}
+}
+
 .navbar-inactive {
+    animation-name: navbar-inactive-switch;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+
     color: var(--primary-color);
 
     background-color: var(--foreground-color);
