@@ -97,6 +97,12 @@ body {
     background-color: var(--hover-color);
 }
 
+.navbar-active {
+    color: var(--foreground-color);
+
+    background-color: var(--primary-color);
+}
+
 .navbar-sep {
     display: inherit;
 
