@@ -76,7 +76,7 @@ body {
     border-radius: 15px;
 }
 
-.navbar a {
+.navbar-link {
     display: inherit;
 
     margin: 5px 11px;
@@ -89,12 +89,6 @@ body {
     transform: scale(1, 0.8);
     text-align: center;
     text-decoration: solid;
-
-    background-color: var(--foreground-color);
-}
-
-.navbar a:hover {
-    background-color: var(--hover-color);
 }
 
 .navbar-active {
@@ -102,6 +96,18 @@ body {
 
     background-color: var(--primary-color);
 }
+
+.navbar-inactive {
+    color: var(--primary-color);
+
+    background-color: var(--foreground-color);
+}
+
+.navbar-inactive:hover {
+    background-color: var(--hover-color);
+}
+
+
 
 .navbar-sep {
     display: inherit;

@@ -1,0 +1,12 @@
+Pages:
+    Home:
+
+    Profiles:
+
+    Projects:
+
+
+Elements:
+    Navbar:
+        ☐ Determine when to add divider based on Flexbox wrapping
+        ✔ Highlight link corresponding to curPage @done(24-12-16 11:07)
