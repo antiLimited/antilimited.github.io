@@ -93,7 +93,7 @@ body {
 
 @keyframes navbar-active-switch {
     0% {color: var(--primary-color); background-color: var(--foreground-color); margin: 5px 11px; padding: 9px 9px;}
-    50% {margin: 3px 8px; padding: 12px 12px;}
+    50% {margin: 2px 7px; padding: 13px 13px;}
     100% {color: var(--foreground-color); background-color: var(--primary-color); margin: 5px 11px; padding: 9px 9px;}
 }
 
@@ -116,17 +116,20 @@ body {
     animation-name: navbar-inactive-switch;
     animation-duration: 250ms;
     animation-fill-mode: forwards;
+    transition: 500ms;
 
     color: var(--primary-color);
 
     background-color: var(--foreground-color);
 }
 
-.navbar-inactive:hover {
-    background-color: var(--hover-color);
+@keyframes navbar-inactive-hover {
+
 }
 
-
+.navbar-inactive:hover {
+    background-color: var(--hover-color) !important;
+}
 
 .navbar-sep {
     display: inherit;
@@ -145,5 +148,5 @@ body {
 }
 
 .main-content p {
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
