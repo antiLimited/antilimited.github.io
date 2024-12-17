@@ -1,43 +1,50 @@
 <script>
     import { curPage } from "../stores.js";
 
+    let navbar;
+
     let navbarContents = [];
 
     document.addEventListener('DOMContentLoaded', function() {
         console.log("DOM loaded!");
+        navbar = document.querySelector(".navbar");
+        
         if (window.scrollY == 0) {
-            document.querySelector(".navbar").classList.add("navbar-init-up")
+            navbar.classList.add("navbar-init-up")
         } else {
-            document.querySelector(".navbar").classList.add("navbar-init-down")
+            navbar.classList.add("navbar-init-down")
         };
 
         navbarContents = Array.from(document.getElementsByClassName("navbar-link"));
+        console.log(document.getElementsByClassName("navbar-link"));
         highlightCurPage(false);
     }, false);
 
     addEventListener("scroll", () => {
         if (window.scrollY == 0) {
-            document.querySelector(".navbar").classList.add("navbar-up");
-            document.querySelector(".navbar").classList.remove("navbar-down");
+            navbar.classList.add("navbar-up");
+            navbar.classList.remove("navbar-down");
         } else {
-            document.querySelector(".navbar").classList.add("navbar-down");
-            document.querySelector(".navbar").classList.remove("navbar-up");
+            navbar.classList.add("navbar-down");
+            navbar.classList.remove("navbar-up");
         }
     });
 
     
-    function highlightCurPage(initStatus, empty) {
+    function highlightCurPage(empty) {
         for (let i = 0; i < navbarContents.length; i++) {
-            if ($curPage == navbarContents[i].innerHTML.toLowerCase()) {
-                navbarContents[i].classList.add("navbar-active");
-                if (initStatus) navbarContents[i].classList.remove("navbar-inactive");
+            const link = navbarContents[i]
+            if ($curPage == link.innerHTML.toLowerCase()) {
+                link.classList.add("navbar-active");
+                link.classList.remove("navbar-inactive");
             } else {
-                navbarContents[i].classList.add("navbar-inactive");
-                if (initStatus) navbarContents[i].classList.remove("navbar-active");
+                link.classList.add("navbar-inactive");
+                link.classList.remove("navbar-active");
             };
         };
+        console.log(document.getElementsByClassName("navbar-link"));
     };
-    $effect(() => highlightCurPage(true, $curPage));
+    $effect(() => highlightCurPage($curPage));
 </script>
 
 <div class="navbar">

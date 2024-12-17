@@ -123,6 +123,10 @@ body {
     background-color: var(--foreground-color);
 }
 
+.navbar-inactive-skipanim {
+    animation-delay: -1s;
+}
+
 @keyframes navbar-inactive-hover {
 
 }
