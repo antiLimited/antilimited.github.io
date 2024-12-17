@@ -57,9 +57,9 @@
 </script>
 
 <div class="navbar">
-    <a href="javascript:;" class="navbar-link" onclick={() => $curPage = "home"}>HOME</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "home"}>HOME</a>
     <div class="navbar-sep"></div>
-    <a href="javascript:;" class="navbar-link" onclick={() => $curPage = "profiles"}>PROFILES</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "profiles"}>PROFILES</a>
     <div class="navbar-sep"></div>
-    <a href="javascript:;" class="navbar-link" onclick={() => $curPage = "projects"}>PROJECTS</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "projects"}>PROJECTS</a>
 </div>
