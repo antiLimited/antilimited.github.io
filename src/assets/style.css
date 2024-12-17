@@ -123,8 +123,16 @@ body {
     background-color: var(--foreground-color);
 }
 
-.navbar-inactive-skipanim {
+.navbar-inactive-pgload {
+    animation-name: navbar-inactive-switch;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
     animation-delay: -1s;
+    transition: 500ms;
+
+    color: var(--primary-color);
+
+    background-color: var(--foreground-color);
 }
 
 @keyframes navbar-inactive-hover {
