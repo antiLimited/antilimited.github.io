@@ -12,7 +12,7 @@
         };
 
         navbarContents = Array.from(document.getElementsByClassName("navbar-link"));
-        highlightCurPage(navbarContents);
+        highlightCurPage(false);
     }, false);
 
     addEventListener("scroll", () => {
@@ -26,24 +26,24 @@
     });
 
     
-    function highlightCurPage(links, empty) {
-        for (let i = 0; i < links.length; i++) {
-            if ($curPage == links[i].innerHTML.toLowerCase()) {
-                links[i].classList.add("navbar-active");
-                links[i].classList.remove("navbar-inactive");
+    function highlightCurPage(initStatus, empty) {
+        for (let i = 0; i < navbarContents.length; i++) {
+            if ($curPage == navbarContents[i].innerHTML.toLowerCase()) {
+                navbarContents[i].classList.add("navbar-active");
+                if (initStatus) navbarContents[i].classList.remove("navbar-inactive");
             } else {
-                links[i].classList.add("navbar-inactive");
-                links[i].classList.remove("navbar-active");
+                navbarContents[i].classList.add("navbar-inactive");
+                if (initStatus) navbarContents[i].classList.remove("navbar-active");
             };
         };
     };
-    $effect(() => highlightCurPage(navbarContents, $curPage));
+    $effect(() => highlightCurPage(true, $curPage));
 </script>
 
 <div class="navbar">
-    <a href="#" class="navbar-link navbar-inactive" onclick={() => $curPage = "home"}>HOME</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "home"}>HOME</a>
     <div class="navbar-sep"></div>
-    <a href="#" class="navbar-link navbar-inactive" onclick={() => $curPage = "profiles"}>PROFILES</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "profiles"}>PROFILES</a>
     <div class="navbar-sep"></div>
-    <a href="#" class="navbar-link navbar-inactive" onclick={() => $curPage = "projects"}>PROJECTS</a>
+    <a href="#" class="navbar-link" onclick={() => $curPage = "projects"}>PROJECTS</a>
 </div>
