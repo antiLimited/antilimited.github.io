@@ -115,32 +115,31 @@ body {
 .navbar-inactive {
     animation-name: navbar-inactive-switch;
     animation-duration: 250ms;
-    animation-fill-mode: forwards;
-    transition: 500ms;
+    animation-fill-mode: none;
 
     color: var(--primary-color);
-
-    background-color: var(--foreground-color);
 }
 
 .navbar-inactive-pgload {
     animation-name: navbar-inactive-switch;
     animation-duration: 250ms;
-    animation-fill-mode: forwards;
+    animation-fill-mode: none;
     animation-delay: -1s;
-    transition: 500ms;
 
     color: var(--primary-color);
+}
 
+.navbar-link:not(.navbar-active) {
     background-color: var(--foreground-color);
+    margin: 5px 11px;
+    padding: 9px 9px;
+    transition: background-color 100ms ease;
 }
 
-@keyframes navbar-inactive-hover {
-
-}
-
-.navbar-inactive:hover {
-    background-color: var(--hover-color) !important;
+.navbar-link:not(.navbar-active):hover, .navbar-link:not(.navbar-active):focus {
+    background-color: var(--hover-color);
+    margin: 3px 9px;
+    padding: 11px 11px;
 }
 
 .navbar-sep {

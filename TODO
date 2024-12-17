@@ -8,5 +8,6 @@ Pages:
 
 Elements:
     Navbar:
+        ✔ Set inactive boxes to hoverColor when hovered or focused @started(24-12-17 00:09) @done(24-12-17 00:13) @lasted(4m13s)
         ☐ Determine when to add divider based on Flexbox wrapping
         ✔ Highlight link corresponding to curPage @done(24-12-16 11:07)
