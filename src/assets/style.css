@@ -156,8 +156,6 @@ body {
 /* Main Content */
 .main-content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
