@@ -9,7 +9,7 @@
     import PageProjects from "./lib/pages/projects.svelte";
 
     // Set initial curPage based on URL parameters
-    $curPage = new URLSearchParams (window.location.search).get("p").toLowerCase();
+    $curPage = new URLSearchParams (window.location.search).get("p");
 
     // Define valid pagelist for check process
     const pageList = [
@@ -22,6 +22,7 @@
     if ($curPage == undefined) {
         $curPage = "home" // Set curPage to home if no URL parameters were applied
     } else {
+        $curPage = $curPage.toLowerCase() // Account for capitalization errors by lowercasing curPage
         let matches = false;
         // Loop through valid pagelist to check against curPage if URL parameters were applied
         for (let i = 0; i < pageList.length; i++) {
@@ -32,11 +33,10 @@
 
     function updateURL(page) {
         let newurl = window.location.origin + window.location.pathname + "?p=" + page + "#"; // Create updated URL based on page argument
-        window.history.pushState({path:newurl},'',newurl); // Apply updated URL
+        window.history.pushState({path:newurl}, "", newurl); // Apply updated URL
     };
 
     $effect(() => updateURL($curPage)); // Update and apply URL based on curPage
-    console.log($curPage.toString())
 </script>
 
 <Navbar></Navbar>
