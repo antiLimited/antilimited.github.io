@@ -64,6 +64,8 @@ body {
     border-radius: 0px 0px 15px 15px;
 
     background-color: var(--navbar-foreground-color);
+
+    z-index: 100;
 }
 
 .navbar-init-up {
@@ -153,7 +155,18 @@ body {
 
 /* Main Content */
 .main-content {
-    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    margin: auto;
 }
 
 .main-content h1,h2,h3,h4,h5,h6 {
