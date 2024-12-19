@@ -26,9 +26,21 @@ body {
 
 /* Navigation Bar */
 @keyframes up-navbar {
-    0% {top: 25px; border-radius: 15px;}
-    50% {top: 0px; padding-top: 25px; border-radius: 0px 0px 15px 15px;}
-    100% {padding-top: 0px; border-radius: 0px 0px 15px 15px;}
+    0% {
+        top: 25px;
+        border-radius: 15px;
+    }
+
+    50% {
+        top: 0px;
+        padding-top: 25px;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    100% {
+        padding-top: 0px;
+        border-radius: 0px 0px 15px 15px;
+    }
 }
 
 .navbar-up {
@@ -38,9 +50,19 @@ body {
 }
 
 @keyframes down-navbar {
-    0% {top: 0px; border-radius: 0px 0px 15px 15px;}
-    20% {border-radius: 15px;}
-    100% {top: 25px; border-radius: 15px;}
+    0% {
+        top: 0px;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    20% {
+        border-radius: 15px;
+    }
+
+    100% {
+        top: 25px;
+        border-radius: 15px;
+    }
 }
 
 .navbar-down {
@@ -96,9 +118,24 @@ body {
 }
 
 @keyframes navbar-active-switch {
-    0% {color: var(--primary-color); background-color: var(--foreground-color); margin: 5px 11px; padding: 9px 9px;}
-    50% {margin: 2px 7px; padding: 13px 13px;}
-    100% {color: var(--foreground-color); background-color: var(--primary-color); margin: 5px 11px; padding: 9px 9px;}
+    0% {
+        color: var(--primary-color);
+        background-color: var(--foreground-color);
+        margin: 5px 11px;
+        padding: 9px 9px;
+    }
+
+    50% {
+        margin: 2px 7px;
+        padding: 13px 13px;
+    }
+
+    100% {
+        color: var(--foreground-color);
+        background-color: var(--primary-color);
+        margin: 5px 11px;
+        padding: 9px 9px;
+    }
 }
 
 .navbar-active {
@@ -112,8 +149,15 @@ body {
 }
 
 @keyframes navbar-inactive-switch {
-    0% {color: var(--foreground-color); background-color: var(--primary-color);}
-    100% {color: var(--primary-color); background-color: var(--foreground-color);}
+    0% {
+        color: var(--foreground-color);
+        background-color: var(--primary-color);
+    }
+
+    100% {
+        color: var(--primary-color);
+        background-color: var(--foreground-color);
+    }
 }
 
 .navbar-inactive {
@@ -140,7 +184,8 @@ body {
     transition: background-color 100ms ease;
 }
 
-.navbar-link:not(.navbar-active):hover, .navbar-link:not(.navbar-active):focus {
+.navbar-link:not(.navbar-active):hover,
+.navbar-link:not(.navbar-active):focus {
     background-color: var(--hover-color);
     margin: 3px 9px;
     padding: 11px 11px;
@@ -167,7 +212,12 @@ body {
     margin: auto;
 }
 
-.main-content h1,h2,h3,h4,h5,h6 {
+.main-content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--primary-color);
 }
 

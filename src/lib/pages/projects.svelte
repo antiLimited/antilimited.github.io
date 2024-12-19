@@ -1,19 +1,5 @@
 <script>
     import { curPage } from "../../stores.js";
-
-    const isElementLoaded = async (selector) => {
-        while (document.querySelector(selector) === null) {
-            await new Promise((resolve) => requestAnimationFrame(resolve));
-        }
-        return document.querySelector(selector);
-    };
-
-    let colCount = $state();
-
-    isElementLoaded(".grid").then((selector) => {
-        colCount = selector.children.length;
-        for (let i = 0;)
-    });
 </script>
 
 <div class="grid">
@@ -38,9 +24,17 @@
 <style>
     .grid {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        align-items: stretch;
+
+        margin: 0%;
     }
 
     .col {
+        align-items: center;
+
         flex: 1;
     }
 </style>
